@@ -85,7 +85,7 @@ module.exports = {
 
 运行：
 ```
-webpack --config webpack.dll.config.js
+npm run webpack-dll
 ```
 生成两个文件，一个是打包好的`bundlejs`，另外一个是`bundle.mainifest.json`，大致内容如下：
 ```
