@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   resolve: { 
     modules: [path.resolve(__dirname, "node_modules"), "node_modules"],
@@ -14,7 +15,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "../build"),
     publicPath: './',
-    filename: '[name].js'
+    filename: '[name][hash].js'
   },
   module: {
     loaders: [{
@@ -41,5 +42,14 @@ module.exports = {
       context: './',
       manifest: require("../build/bundle.manifest.json"),
     }),
+    new HtmlWebpackPlugin({
+      templateContent: function(templateParams, compilation) {
+        // Return your template content synchronously here 
+        console.log('xx', templateParams.webpack.assetsByChunkName.main)
+        // console.log(compilation)
+        return '..';
+      },
+      inject: false
+    })
   ]
 };

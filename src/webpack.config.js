@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var path = require('path');
 module.exports = {
   entry: {
@@ -24,5 +25,11 @@ module.exports = {
       context: './',
       manifest: require("./build/bundle.manifest.json"),
     }),
+    new HtmlWebpackPlugin({
+      templateContent: function(templateParams, compilation) {
+        // Return your template content synchronously here 
+        return '..';
+      }
+    })
   ]
 };
