@@ -1,7 +1,13 @@
 const webpack = require('webpack');
 module.exports = {
     entry: {
-        bundle: ['react', 'react-dom']
+        bundle: [
+            'react',
+            "jquery",
+            // 'vuex',
+            'vuex/dist/vuex.esm.js',
+            'react-dom'
+        ]
     },
     output: {
         path: __dirname + './build',

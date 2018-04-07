@@ -3,6 +3,7 @@ module.exports = {
     entry: {
         bundle: [
             'react',
+            "jquery",
             // 'vuex',
             'vuex/dist/vuex.esm.js',
             'react-dom'

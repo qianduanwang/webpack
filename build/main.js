@@ -76,7 +76,7 @@ module.exports = bundle_library;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(82);
+module.exports = (__webpack_require__(0))(83);
 
 /***/ }),
 /* 2 */
@@ -95,7 +95,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _vuex = __webpack_require__(5);
+var _vuex = __webpack_require__(6);
+
+var _jquery = __webpack_require__(5);
+
+var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -118,6 +122,7 @@ var App = function (_Component) {
 		key: 'render',
 		value: function render() {
 			console.log(_vuex.mapState);
+			console.log(_jquery2.default);
 			return _react2.default.createElement(
 				'h1',
 				null,
@@ -135,7 +140,7 @@ exports.default = App;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(81);
+module.exports = (__webpack_require__(0))(82);
 
 /***/ }),
 /* 4 */
@@ -158,13 +163,17 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
-
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(83);
+module.exports = (__webpack_require__(0))(81);
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(0))(84);
 
 /***/ })
 /******/ ]);
