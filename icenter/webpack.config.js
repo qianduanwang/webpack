@@ -15,7 +15,11 @@ module.exports = {
   output: {
     path: path.join(__dirname, "../build"),
     publicPath: './',
-    filename: '[name][hash].js'
+    // mode: 'production',
+    // filename: '[name][hash].js'
+    // libraryTarget: 'umd',
+    // libraryTarget: 'commonjs2',
+    filename: '[name].js'
   },
   module: {
     loaders: [{
@@ -43,13 +47,13 @@ module.exports = {
       manifest: require("../build/bundle.manifest.json"),
     }),
     new HtmlWebpackPlugin({
-      templateContent: function(templateParams, compilation) {
-        // Return your template content synchronously here 
-        console.log('xx', templateParams.webpack.assetsByChunkName.main)
-        // console.log(compilation)
-        return '..';
-      },
-      inject: false
+      // templateContent: function(templateParams, compilation) {
+      //   // Return your template content synchronously here 
+      //   console.log('xx', templateParams.webpack.assetsByChunkName.main)
+      //   // console.log(compilation)
+      //   return '..';
+      // },
+      inject: true
     })
   ]
 };
